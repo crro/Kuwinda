@@ -1,0 +1,60 @@
+Hello Professors,
+
+So I had to make some changes to the original categories layout that I displayed on the presentation on Thursday. I had to do this because when I stress tested the application and deleted the list view from inside the ListView itself I was receiving a very unexpected behavior. Other than that everything remained the same and the application now is fully functional.
+
+Things to note:
+When displaying the results (results, links and webview), I locked the appearance of the application to portrait mode so that the AsyncTasks would not die and and be recreated again every time. 
+----------------------------------------------------------------
+
+Organization of the code:
+
+-mx.ait.crro.kuwindasearchapp
+
+Contains the MainmenuActivity which holds the ViewPager, the constants used throughout the whole application, the ResultsActivity which is the FragmentActivity that controls the whole process of gettings the results, displaying the links and presenting the WebView in the corresponding fragment.
+
+It has an interface used to make the switch between fragments in the ResultsActivity.
+
+WebsitesActivity runs when the user need to select the websites for a category
+
+SearchInCategoryActivity is the new activity implemented used to search inside a specific Category created byt he user.
+
+-mx.ait.crro.kuwindasearchapp.adapter
+
+Contains all fo the adapters used in the various lists of the apps. The CategoriesAdapter, the ChooseDefaultAdapter and the Websites adapter use a cursor adapter and the communicate with the database
+
+The MainMenuFragmentAdapter is the PageView adapter.
+
+The remaining adapters extend from base adapter and display information that is only temporary (search results.)
+
+-mx.ait.crro.kuwindasearchapp.application
+
+Is an application class used to fetch the loaders that manage the two tables in the SQLite database that I implemented.
+
+-mx.ait.crro.kuwindasearchapp.data.categories
+
+Contains the object model for a category
+
+-mx.ait.crro.kuwindasearchapp.data.websites
+
+Contains all the websites that Kuwinda is able to search in. There is something to note in this part of the application. Notice that we have a Website class and a WebsiteModel class. the Website class is an abstract class from which the specific websites like theVerge, Gizmodo, etc extend from. The WebsiteModel is an actual class used to represent the objects of the websites stored in the database.
+
+-mx.ait.crro.kuwindasearchapp.datastorage
+
+The CategoriesLoader manages the categories table in the database, the WebsitesLoader does the same thing for the table of Websites. The DbConstants contains the constants used in the datastorage. The DatabaseHelper interacts with the loaders to accomplish the interaction between the classes and the actual database.
+
+-mx.ait.crro.kuwindasearchapp.fragment
+
+Contains all of the fragments used throughout the application. The names of the classes are pretty self-explanatory and they corresponds to the diagram in the powerpoint resentation. If you have any questions about the functionality fo each please do not hesitate to contact me. 
+
+-mx.ait.crro.kuwindasearchapp.search
+
+Contains the objec model for a link and the AsyncTask that is in charge of fetching the results and displaying them on screen.
+
+----------------------------------------------------------------
+
+There are too many details to include them in the README. However, I would like to mention that wherever I felt it was necessary, I saved the state of the application so that it would survive the Activity restart. I used AsyncTasks to fetch and display the results and also to interact with the database so that the UI thread would not be blocked. And finally, the interaction between components was done wither thourhg intents (for Activites) through arguments (for fragments) and through local Broadcasts.
+
+As a final note I would like to say that I grealty enjoyed all the lectures, the teaching queality was excellent and I had a lot of fun implementing this application that to this date is the most complex piece of software that I have created.
+
+Best Regards,
+David Correa
