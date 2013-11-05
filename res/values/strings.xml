@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">KuwindaSearchApp</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="search">Search...</string>
+    <string name="choose_websites">Choose Websites</string>
+    <string name="btnSearch">Search</string>
+    <string name="keyword">Keyword...</string>
+    <string name="add_to_favorites">Add to Favorites</string>
+    <string name="title_">Title...</string>
+    <string name="done">Done</string>
+    <string name="title_activity_websites">WebsitesActivity</string>
+    <string name="edit">Edit</string>
+    <string name="website_name">Website Name</string>
+    <string name="title_activity_results">ResultsActivity</string>
+    <string name="create">Create</string>
+    <string name="delete">Delete</string>
+    <string name="choose_default">Choose Default</string>
+    <string name="title_activity_choose_default_category">ChooseDefaultCategoryActivity</string>
+    <string name="categoryname">CategoryName</string>
+    <string name="title_activity_search_in_category">SearchInCategoryActivity</string>
+    <string name="delete_category">Delete Category</string>
+    <string name="the_default_category_is_">The default category is:</string>
+    <string name="hi_and_welcome_to_kuwindabeta_our_goal_is_to_help_you_make_the_best_decision_when_buying_a_product_or_hiring_a_service_we_try_to_have_the_best_review_sites_out_there_so_that_you_can_group_them_togther_and_search_in_all_of_them_at_once_we_really_apprecite_your_time_and_feedback_and_we_are_happy_to_answer_any_questions_please_start_off_by_swiping_left_and_creating_your_first_group_category_best_the_kuwinda_team_">Hi and welcome to KuwindaBeta! \n        Our goal is to help you make the best decision when buying a product or hiring a service. We try to have the best review sites out there so that you can group them togther and search in all of them at once. We really apprecite your time and feedback and we are happy to answer any questions. Please start off by swiping left and creating your first Group/Category.\n        \n        Best,\nThe Kuwinda Team.</string>
+    <string name="welcome_message">Hi and welcome to KuwindaBeta! \n        Our goal is to help you make the best decision when buying a product or hiring a service. We try to have the best review sites out there so that you can group them togther and search in all of them at once. We really apprecite your time and feedback and we are happy to answer any questions. Please start off by swiping left and creating your first Group/Category.\n        \n        The Kuwinda Team.</string>
+
+</resources>
